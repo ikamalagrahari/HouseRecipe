@@ -96,10 +96,10 @@ const Recipes = () => {
                 </div>
 
                 <div className="flex justify-between items-center mt-6">
-                  <button className="flex items-center gap-2 px-4 py-2 text-white bg-red-500 rounded-lg hover:bg-red-600 transition duration-100">
+                  <button className="flex items-center gap-2 px-4 py-2 text-white bg-red-500 rounded-lg hover:bg-red-600 transition duration-100"  onClick={() => handleDeleteRecipe(recipe._id)}>
                     <FontAwesomeIcon icon={faTrash} className="hover:text-gray-300 transition duration-200" /> Delete
                   </button>
-                  <button className="flex items-center gap-2 px-4 py-2 text-white bg-indigo-500 rounded-lg hover:bg-indigo-600 transition duration-100">
+                  <button className="flex items-center gap-2 px-4 py-2 text-white bg-indigo-500 rounded-lg hover:bg-indigo-600 transition duration-100"  onClick={() => handleAddToFavorites(recipe._id)} >
                     <FontAwesomeIcon icon={faHeart} className="hover:text-pink-400 transition duration-200" /> Favorite
                   </button>
                   <Link to={`/updateRecipe/${recipe._id}`} className="flex items-center gap-2 px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-100">
